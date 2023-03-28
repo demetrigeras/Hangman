@@ -41,6 +41,13 @@ let randomWord = "";
 let gameState = [];
 let testword = getWord();
 
+function lockkeys () {
+  if (numguess == 0 || !gameState.includes(" _ "))  {
+    removeEventListener(("keydown", outputSubmit))
+  }
+}
+
+
 function getWord() {
   fetch(url)
     .then((response) => response.json())
