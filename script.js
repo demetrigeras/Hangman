@@ -43,7 +43,7 @@ let testword = getWord();
 
 function lockkeys () {
   if (numguess == 0 || !gameState.includes(" _ "))  {
-    removeEventListener(("keydown", outputSubmit))
+    elkey.removeEventListener("keydown", outputSubmit)
   }
 }
 
@@ -176,7 +176,7 @@ function guesses(userInput) {
 
   if (numguess == 0) {
     underkb.innerHTML = "You Lose! The word was " + randomWord + "!";
-
+    lockkeys ()
     console.log("You Lose");
 
     //document.querySelector(".Hangman").style.backgroundImage = `url("./firstpic.png")`
@@ -188,7 +188,7 @@ function guesses(userInput) {
 function winner() {
   if (!gameState.includes(" _ ")) {
     underkb.innerHTML = "You Win!";
-
+    lockkeys ()
     console.log("You Win");
   }
 }
