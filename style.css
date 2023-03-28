@@ -48,11 +48,15 @@ header {
     margin-top: 50px;
     border: solid;
     display: flex;
-    background-color: white;
+    background-color: whitesmoke;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    
+    font-family: 'Inter', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+
 }
 .keyboard {
     margin-top: 50px;
@@ -62,6 +66,7 @@ header {
    
    background-color: white;
    font-weight: bold;
+   
    
 }
 
@@ -111,5 +116,14 @@ header {
 .input-form  {
     color: white
 }
+
+/* .pikachungus {
+    height: 50px;
+    width: 50px;
+    background-image: url(https://media.tenor.com/LmoTSIbR8wEAAAAC/buff-pikachu.gif);
+    background-image: 
+
+} */
+
 
 
