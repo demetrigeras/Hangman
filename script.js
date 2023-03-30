@@ -31,6 +31,32 @@ const alphletters = [
   "x",
   "y",
   "z",
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "H",
+  "I",
+  "J",
+  "K",
+  "L",
+  "M",
+  "N",
+  "O",
+  "P",
+  "Q",
+  "R",
+  "S",
+  "T",
+  "U",
+  "V",
+  "W",
+  "X",
+  "Y",
+  "Z"
 ];
 
 const selectedchar = [];
@@ -75,7 +101,7 @@ function allLetter(char) {
 const outputSubmit = function (e) {
   elkey.value = "";
   if (allLetter(e.key)) {
-    if (selectedchar.includes(e.key)) {
+  if (selectedchar.includes(e.key)) {
       console.log("You already pressed that!");
       underkb.innerHTML = "You already pressed that!"
       return;
@@ -85,7 +111,7 @@ const outputSubmit = function (e) {
     }
 
     for (let i = 0; i < letters.length; i++) {
-      if (letters[i].dataset.letter === e.key) {
+      if (letters[i].dataset.letter.toLowerCase() === e.key) {
         if (updateGameState(e.key)) {
           letters[i].classList.add("correct");
         } else {
@@ -100,6 +126,8 @@ elkey.addEventListener("keydown", outputSubmit);
 allLetter();
 
 function updateGameState(userInput) {
+  userInput = userInput.toLowerCase();
+  randomWord = randomWord.toLowerCase();
   if (guesses(userInput)) {
     for (let i = 0; i < randomWord.length; i++) {
       if (randomWord[i] === userInput) {
@@ -116,7 +144,7 @@ function updateGameState(userInput) {
 }
 
 function restartGame() {
-  //gameState = Array(randomWord.length).fill(" _ ");
+  
   window.location.reload();
 
   updateUI();

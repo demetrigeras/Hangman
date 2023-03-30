@@ -45,7 +45,7 @@ header {
 }
 .underkb {
     height: 40px;
-    margin-top: 50px;
+    margin-top: 45px;
     border: solid;
     display: flex;
     background-color: whitesmoke;
@@ -59,7 +59,7 @@ header {
 
 }
 .keyboard {
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 .Sng {
